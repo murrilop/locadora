@@ -1,5 +1,5 @@
 <?php
-include_once 'conectar.php';
+include_once '../../config/conectar.php';;
 
 $id_cliente = $_GET['id'];
 
@@ -11,6 +11,6 @@ if ($stmt->execute()) {
     echo "<h2>Cliente excluído com sucesso</h2>";
     header("Location: listar_clientes.php");
 } else {
-    echo "Erro ao tentar excluir cliente!";
+    echo "Código chato do caralho vsf!";
 }
 ?>
