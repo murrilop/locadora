@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+header {
+    background-color: #00b8a9;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+.confirmacao {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.confirmacao-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmacao h2 {
+    color: #00b8a9;
+    margin-bottom: 30px;
+}
+
+.confirmacao-content {
+    text-align: left;
+}
+
+.confirmacao-content h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.confirmacao-content .info {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.confirmacao-content .info p {
+    margin: 8px 0;
+}
+
+.confirmacao-content .info strong {
+    color: #00b8a9;
+}
+
+
+.actions a {
+    background-color: #ff6f00;
+    color: white;
+    text-decoration: none;
+    padding: 13px 17px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.actions a:hover {
+    background-color: #e65c00;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px; 
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
