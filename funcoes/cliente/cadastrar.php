@@ -1,4 +1,5 @@
 <?php
+
 include_once '../../config/conectar.php';
 
 $nome = $_POST['nome'];

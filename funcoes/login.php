@@ -1,4 +1,5 @@
 <?php
+
 @session_start();
 require_once("../config/conectar.php");
 
@@ -29,6 +30,7 @@ if($total_reg > 0){
         $_SESSION['nome'] = $res[0]['nome_cliente'];
         
         header("location: ../html/homeusuario.php");
+
         } else if ($tipo_usuario == 'adm') {
             $_SESSION['codigo_usuario'] = $res[0]['codigo_usuario'];
             $_SESSION['email'] = $res[0]['email'];
