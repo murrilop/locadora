@@ -1,3 +1,10 @@
+<?php
+
+    include("../config/conectar.php");
+    include("../funcoes/verificar_session_cliente.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

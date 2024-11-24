@@ -1,3 +1,9 @@
+<?php
+
+  
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,9 +23,10 @@
             
             <!-- Navbar -->
             <nav class="navbar">
-                <a href="/locadora/html/escolhaveiculo.html"> Escolha seu veiculo</a>
-                <a href="/locadora/html/resumolocacao.html">Histórico de Locações</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                    <a href="gerenciar-veiculos.php">Gerenciar Veículos</a>
+                    <a href="gerenciar-locacoes.php">Gerenciar Locações</a>
+                    <a href="relatorios.php">Relatórios</a>
+                    <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>
@@ -28,7 +35,7 @@
         <div class="banner-text">
             <h2>Alugue um Carro Agora!</h2>
             <p>Temos a frota ideal para você, desde carros compactos até SUVs e utilitários.</p>
-            <a href="/locadora/html/locacao.html" class="cta-button">Faça sua locação</a>
+            <a href="locacao1.html" class="cta-button">Faça sua locação</a>
         </div>
     </section>
 
@@ -37,18 +44,18 @@
         <h2>Nosso Catálogo de Veículos</h2>
         <div class="veiculos">
             <div class="veiculo">
-                <img src="/locadora/img/compacto-kwid.jpg" alt="Carro Compacto">
-                <h3>Carros Compactos</h3>
+                <img src="/locadora/img/carrocompacto.jpg" alt="Carro Compacto">
+                <h3>Carro Compacto</h3>
                 <p>Aproveite nossos carros econômicos com ótima performance e baixo custo.</p>
             </div>
             <div class="veiculo">
                 <img src="/locadora/img/suvimg.jpg" alt="SUV">
-                <h3>SUVs</h3>
+                <h3>SUV</h3>
                 <p>Para quem busca conforto, espaço e alta performance. Ideal para viagens longas.</p>
             </div>
             <div class="veiculo">
                 <img src="/locadora/img/utilitarioimg.jpg" alt="Utilitário">
-                <h3>Utilitários</h3>
+                <h3>Utilitário</h3>
                 <p>Alugue um utilitário para suas necessidades comerciais ou mudanças.</p>
             </div>
         </div>

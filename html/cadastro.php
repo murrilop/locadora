@@ -1,3 +1,8 @@
+<?php
+
+include("../config/conectar.php");
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +16,7 @@
     <!-- Container de Cadastro -->
     <div class="cadastro-container">
         <h1>Cadastre-se na Lovetec</h1>
-        <form action="#" method="post">
+        <form action="../funcoes/cliente/cadastrar.php" method="post">
             <label for="nome">Nome Completo</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
@@ -31,7 +36,7 @@
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
             <label for="data-nascimento">Data de Nascimento</label>
-            <input type="date" id="data-nascimento" name="data-nascimento" required>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
 
             <button type="submit">Cadastrar</button>
         </form>

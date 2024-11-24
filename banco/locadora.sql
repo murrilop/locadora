@@ -1,72 +1,80 @@
 DROP DATABASE locadora;
 
-CREATE database locadora;
+CREATE DATABASE locadora;
+
 USE locadora;
 
-CREATE TABLE endereco (
-    `id_endereco` int AUTO_INCREMENT,
-    `endereco` varchar(255) DEFAULT NULL,
-    `id_cliente` int DEFAULT NULL,
-    `id_locadora` int DEFAULT NULL,
-    PRIMARY KEY (`id_endereco`),
-    FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`),
-    FOREIGN KEY (`id_locadora`) REFERENCES `locadora` (`id_locadora`)
-);
-
 CREATE TABLE locadora (
-    id_locadora INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    cnpj VARCHAR(20) NOT NULL,
-    id_endereco INT,
-    FOREIGN KEY (id_endereco) REFERENCES Endereco(id_endereco)
+    codigo_locadora int auto_increment PRIMARY KEY,
+    nome_locadora varchar (50),
+    cnpj_locadora varchar (14) not null
 );
 
 CREATE TABLE cliente (
-    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    data_nascimento DATE NOT NULL,
-    numero_cnh VARCHAR(20) NOT NULL,
-    id_endereco INT,
-    FOREIGN KEY (id_endereco) REFERENCES Endereco(id_endereco)
-);
-
-CREATE TABLE veiculo (
-    id_veiculo INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    placa VARCHAR(10) NOT NULL,
-    valor_diaria DECIMAL(10, 2) NOT NULL,
-    ano_fabricacao YEAR NOT NULL,
-    cor VARCHAR(50) NOT NULL,
-    modelo VARCHAR(100) NOT NULL
+    codigo_cliente int auto_increment PRIMARY KEY,
+    nome_cliente varchar (50) not null,
+    data_nascimento_cliente date,
+    numero_cnh_cliente varchar (11) not null
 );
 
 CREATE TABLE locacao (
-    id_locacao INT AUTO_INCREMENT PRIMARY KEY,
-    id_cliente INT,
-    id_veiculo INT,
-    data_inicial DATE NOT NULL,
-    data_final DATE NOT NULL,
-    valor_total DECIMAL(8, 2) NOT NULL,
-    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
-    FOREIGN KEY (id_veiculo) REFERENCES Veiculo(id_veiculo)
+    codigo_locacao int auto_increment PRIMARY KEY,
+    data_inicial_locacao date not NULL,
+    data_final_locacao date not NULL,
+    valor_diaria_locacao DECIMAL (6,2) NOT NULL,
+    valor_final_locacao DECIMAL (6,2) NOT NULL
+);
+
+CREATE TABLE veiculo (
+    codigo_veiculo int auto_increment PRIMARY KEY,
+    nome_veiculo varchar (40) not null,
+    placa_veiculo varchar(8) not null,
+    valor_diaria_veiculo DECIMAL (6,2) not null,
+    ano_fabricacao_veiculo varchar (4) not null,
+    cor_veiculo varchar (12) not null,
+    modelo_veiculo varchar (30) not null
+);
+
+CREATE TABLE endereco (
+    codigo_endereco int auto_increment PRIMARY KEY,
+    nome_endereco varchar(50) not null,
+    codigo_cliente int,
+    codigo_locadora int,
+    tipo_endereco varchar (50) null
 );
 
 CREATE TABLE telefone (
-    id_telefone INT AUTO_INCREMENT PRIMARY KEY,
-    numero VARCHAR(20) NOT NULL,
-    id_cliente INT,
-    id_locadora INT,
-    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
-    FOREIGN KEY (id_locadora) REFERENCES Locadora(id_locadora) 
+    codigo_telefone int auto_increment PRIMARY KEY,
+    numero_telefone varchar (13) not null,
+    codigo_cliente int,
+    codigo_locadora int
 );
 
 CREATE TABLE usuario (
-    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL,
-    papel ENUM('ADMINISTRADOR', 'CLIENTE') NOT NULL,
-    id_cliente INT,
-    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
+	 codigo_usuario INT AUTO_INCREMENT,
+	 email VARCHAR (50) NOT NULL,
+	 senha VARCHAR (20) NOT NULL,
+	 tipo_usuario ENUM('cliente','adm'),
+	 codigo_cliente INT,
+	 PRIMARY KEY(codigo_usuario)
 );
-
-SHOW TABLES;
+ 
+ALTER TABLE endereco ADD CONSTRAINT FK_endereco_2
+    FOREIGN KEY (codigo_cliente)
+    REFERENCES cliente (codigo_cliente);
+ 
+ALTER TABLE endereco ADD CONSTRAINT FK_endereco_3
+    FOREIGN KEY (codigo_locadora)
+    REFERENCES locadora (codigo_locadora);
+ 
+ALTER TABLE telefone ADD CONSTRAINT FK_telefone_2
+    FOREIGN KEY (codigo_cliente)
+    REFERENCES cliente (codigo_cliente);
+ 
+ALTER TABLE telefone ADD CONSTRAINT FK_telefone_3
+    FOREIGN KEY (codigo_locadora)
+    REFERENCES locadora (codigo_locadora);
+    
+ALTER TABLE usuario ADD CONSTRAINT fk_codigo_cliente
+	FOREIGN KEY (codigo_cliente) 
+	REFERENCES cliente(codigo_cliente);

@@ -13,7 +13,7 @@
         <p>Ao sair, você será desconectado de sua conta.</p>
 
         <div class="logout-buttons">
-            <a href="/locadora/html/index.html" class="btn-sair">Sim, Sair</a>
+            <a href="../funcoes/logout.php" class="btn-sair">Sim, Sair</a>
             <a href="/locadora/html/homeusuario.html" class="btn-cancelar">Cancelar</a>
         </div>
     </div>

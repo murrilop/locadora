@@ -8,15 +8,14 @@
 </head>
 <body>
 
-    <!-- Container do Login -->
     <div class="login-container">
         <h1>Bem-vindo à Lovetec!</h1>
-        <form action="#" method="post">
+        <form action="../funcoes/login.php" method="post">
             <label for="username">Usuário</label>
-            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
             <button type="submit">Entrar</button>
         </form>
