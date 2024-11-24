@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: #00b8a9;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 90px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #00b8a9;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.edit-button {
+    background-color: #4caf50; 
+}
+
+button.edit-button:hover {
+    background-color: #45a049;
+}
+
+button.delete-button {
+    background-color: #f44336; 
+    margin-left: 5px;
+}
+
+button.delete-button:hover {
+    background-color: #e53935;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.add-button{
+    background-color: #00b8a9;
+}
+
+.add-button:hover {
+    background-color: #008f7f;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px; 
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
