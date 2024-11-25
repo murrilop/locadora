@@ -3,6 +3,11 @@
     include("../config/conectar.php");
     include("../funcoes/verificar_session_cliente.php");
 
+    $sql = "SELECT * FROM veiculo";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +36,19 @@
     <section class="locacao">
         <div class="locacao-container">
             <h2>Faça sua Locação</h2>
-            <form class="locacao-form">
+            <form class="locacao-form" action="../funcoes/locacao/nova_locacao.php" METHOD="POST">
                 <div class="form-group">
                     <label for="veiculo">Escolha o Veículo</label>
-                    <select id="veiculo" name="veiculo" required>
+
+                    <?php if(count($res) > 0): ?>
+                        <select name="veiculo" id="veiculo" required>
+                            <?php foreach($res as $veiculo): ?>
+                                <option value="<?php echo $veiculo['codigo_veiculo']; ?>"><?php echo $veiculo['nome_veiculo']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php endif; ?>
+
+                    <!-- <select id="veiculo" name="veiculo" required>
                         <option value="mobi">Fiat Mobi</option>
                         <option value="uno">Fiat Uno</option>
                         <option value="kwid">Renault Kwid</option>
@@ -44,7 +58,7 @@
                         <option value="doblo">Fiat Doblo</option>
                         <option value="hr">Hyundai HR</option>
 
-                    </select>
+                    </select> -->
                 </div>
                 <div class="form-group">
                     <label for="data-inicio">Data de Início</label>

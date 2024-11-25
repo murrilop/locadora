@@ -78,3 +78,12 @@ ALTER TABLE telefone ADD CONSTRAINT FK_telefone_3
 ALTER TABLE usuario ADD CONSTRAINT fk_codigo_cliente
 	FOREIGN KEY (codigo_cliente) 
 	REFERENCES cliente(codigo_cliente);
+
+insert into usuario (nome_veiculo, senha, tipo_usuario, codigo_cliente)
+values('admin@gmail.com', 123456789, 'adm', NULL);
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Fiat Uno', 'ABC1234', 100.50, '2015', 'Branco', 'Way 1.0');
+
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Toyota Corolla', 'XYZ5678', 250.00, '2020', 'Preto', 'Altis 2.0');
+
