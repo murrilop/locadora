@@ -14,8 +14,8 @@
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
-                <a href="../html/homeusuario.html">Voltar para o início</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                <a href="homeusuario.php">Voltar para o início</a>
+                <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>
@@ -36,7 +36,7 @@
                     <p><strong>Valor da Locação:</strong> R$ 500,00</p>
                 </div>
                 <div class="actions">
-                    <a href="../html/homeusuario.html" class="cta-button">Voltar para o início</a>
+                    <a href="homeusuario.php" class="cta-button">Voltar para o início</a>
                 </div>
             </div>
         </div>

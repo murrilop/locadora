@@ -26,9 +26,9 @@
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
-                <a href="../html/homeusuario.html">Voltar</a>
-                <a href="/locadora/html/resumolocacao.html">Histórico de Locações</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                <a href="homeusuario.php">Voltar</a>
+                <a href="resumolocacao.php">Histórico de Locações</a>
+                <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>

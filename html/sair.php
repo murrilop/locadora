@@ -17,6 +17,7 @@
 
         <div class="logout-buttons">
             <a href="../funcoes/logout.php" class="btn-sair">Sim, Sair</a>
+<<<<<<< HEAD
             <a href="<?php if($_SESSION['tipo_usuario'] == 'cliente'){
                 echo "homeusuario.php";
             }else if($_SESSION['tipo_usuario'] == 'adm'){
@@ -26,6 +27,9 @@
             }
             ?>
             " class="btn-cancelar">Cancelar</a>
+=======
+            <a href="homeadm.php" class="btn-cancelar">Cancelar</a>
+>>>>>>> 11ce20e65f3f9bdd31673bba46f9a7681428f62a
         </div>
     </div>
 

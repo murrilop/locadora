@@ -79,11 +79,34 @@ ALTER TABLE usuario ADD CONSTRAINT fk_codigo_cliente
 	FOREIGN KEY (codigo_cliente) 
 	REFERENCES cliente(codigo_cliente);
 
-insert into usuario (nome_veiculo, senha, tipo_usuario, codigo_cliente)
+insert into usuario (email, senha, tipo_usuario, codigo_cliente)
 values('admin@gmail.com', 123456789, 'adm', NULL);
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Fiat Uno', 'ABC1234', 100.50, '2015', 'Branco', 'Way 1.0');
+
 
 INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Toyota Corolla', 'XYZ5678', 250.00, '2020', 'Preto', 'Altis 2.0');
+VALUES ('Fiat Mobi', 'ABC1234', 150.00, '2015', 'Branco', 'Mobi 1.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Fiat Uno', 'BFC1234', 150.00, '2015', 'Branco', 'Uno 1.0');
 
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Renault Kwid', 'XYZ5678', 150.00, '2020', 'Branco', 'Kwid 2.0');
+
+
+
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Volkswagen T-Cross', 'BVZ5678', 230.00, '2020', 'Branco', 'T-cross 2.0');
+
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Hyundai Creta', 'ASZ5678', 250.00, '2021', 'Branco', 'Creta 2.0');
+
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Crevrolet Tracker', 'ZDZ5678', 270.00, '2023', 'Branco', 'Tracker 2.0');
+
+
+
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Fiat Doblo', 'XFZ5678', 280.00, '2023', 'Branco', 'Doblo 2.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Citroen Jumpy', 'DDZ5678', 280.00, '2023', 'Branco', 'Jumpy 3.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
+VALUES ('Hyundai HR', 'XAG5678', 300.00, '2013', 'Branco', 'HR 2.0');

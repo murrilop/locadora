@@ -14,10 +14,10 @@
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
-                <a href="/locadora/html/dashboard.html">Início</a>
-                <a href="/locadora/html/gerenciar-veiculos.html">Gerenciar Veículos</a>
-                <a href="/locadora/html/gerenciar-locacoes.html">Gerenciar Locações</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                <a href="homeadm.php">Início</a>
+                <a href="gerenciar-veiculos.php">Gerenciar Veículos</a>
+                <a href="gerenciar-locacoes.php">Gerenciar Locações</a>
+                <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>
