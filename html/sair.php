@@ -14,7 +14,7 @@
 
         <div class="logout-buttons">
             <a href="../funcoes/logout.php" class="btn-sair">Sim, Sair</a>
-            <a href="/locadora/html/homeusuario.html" class="btn-cancelar">Cancelar</a>
+            <a href="homeadm.php" class="btn-cancelar">Cancelar</a>
         </div>
     </div>
 

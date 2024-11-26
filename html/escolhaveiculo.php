@@ -14,9 +14,9 @@
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
-                <a href="/locadora/html/homeusuario.html">Início</a>
-                <a href="/locadora/html/resumolocacao.html">Histórico de Locações</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                <a href="homeusuario.php">Início</a>
+                <a href="resumolocacao.php">Histórico de Locações</a>
+                <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>
@@ -59,21 +59,21 @@
                 <div class="veiculo">
                     <img src="/locadora/img/volkswagen-t-cross-suv.jpg" alt="Volkswagen T-Cross">
                     <h4>Volkswagen T-Cross</h4>
-                    <p class="preco">R$150,00 / dia</p>
+                    <p class="preco">R$230,00 / dia</p>
                     <p>Amplo espaço interno e alto desempenho.</p>
                     <a href="locacao4.html" class="cta-button">Selecionar</a>
                 </div>
                 <div class="veiculo">
                     <img src="/locadora/img/hyundai-creta-suv.jpg" alt="Hyundai Creta">
                     <h4>Hyundai Creta</h4>
-                    <p class="preco">R$150,00 / dia</p>
+                    <p class="preco">R$250,00 / dia</p>
                     <p>Conforto e segurança para toda a família.</p>
                     <a href="locacao5.html" class="cta-button">Selecionar</a>
                 </div>
                 <div class="veiculo">
                     <img src="/locadora/img/chevrolet-tracker-suv.jpg" alt="chevrolet Tracker">
                     <h4>Chevrolet Tracker</h4>
-                    <p class="preco">R$170,00 / dia</p>
+                    <p class="preco">R$270,00 / dia</p>
                     <p>Luxo e tecnologia em um só veículo.</p>
                     <a href="locacao6.html" class="cta-button">Selecionar</a>
                 </div>
@@ -87,21 +87,21 @@
                 <div class="veiculo">
                     <img src="/locadora/img/fiatdoblo-utilitario.jpg" alt="Fiat Doblo">
                     <h4>Fiat Doblo</h4>
-                    <p class="preco">R$200,00 / dia</p>
+                    <p class="preco">R$280,00 / dia</p>
                     <p>Perfeito para transportar cargas leves.</p>
                     <a href="locacao7.html" class="cta-button">Selecionar</a>
                 </div>
                 <div class="veiculo">
                     <img src="/locadora/img/citroen-jumpy-utilitario.jpg" alt="Citroen Jumpy">
                     <h4>Citroen Jumpy</h4>
-                    <p class="preco">R$210,00 / dia</p>
+                    <p class="preco">R$280,00 / dia</p>
                     <p>Espaço de carga otimizado e potência.</p>
                     <a href="locacao8.html" class="cta-button">Selecionar</a>
                 </div>
                 <div class="veiculo">
                     <img src="/locadora/img/hyundai-HR-utilitario.jpg.jpg" alt="Renault Master">
                     <h4>Hyundai HR</h4>
-                    <p class="preco">R$220,00 / dia</p>
+                    <p class="preco">R$300,00 / dia</p>
                     <p>Alta capacidade para transporte de cargas.</p>
                     <a href="locacao9.html" class="cta-button">Selecionar</a>
                 </div>
