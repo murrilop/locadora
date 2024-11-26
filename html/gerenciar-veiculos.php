@@ -16,7 +16,7 @@
             <nav class="navbar">
                 <a href="/locadora/html/homeadm.html">Início</a>
                 <a href="/locadora/html/gerenciar-locacoes.html">Gerenciar Locações</a>
-                <a href="/locadora/html/sair.html">Sair</a>
+                <a href="sair.php">Sair</a>
             </nav>
         </div>
     </header>

@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +17,15 @@
 
         <div class="logout-buttons">
             <a href="../funcoes/logout.php" class="btn-sair">Sim, Sair</a>
-            <a href="/locadora/html/homeusuario.html" class="btn-cancelar">Cancelar</a>
+            <a href="<?php if($_SESSION['tipo_usuario'] == 'cliente'){
+                echo "homeusuario.php";
+            }else if($_SESSION['tipo_usuario'] == 'adm'){
+                echo "homeadm.php";
+            }else{
+                echo "index.php";
+            }
+            ?>
+            " class="btn-cancelar">Cancelar</a>
         </div>
     </div>
 
