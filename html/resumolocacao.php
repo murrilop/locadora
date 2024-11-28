@@ -1,3 +1,8 @@
+<?php
+    include("../config/conectar.php");
+    include("../funcoes/verificar_session_cliente.php");
+    include("../funcoes/locacao/mostrar_locacao.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +15,7 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="/img/logo.jpg" alt="Logo LOVETEC">
+                <img src="../img/logo.jpg" alt="Logo LOVETEC">
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
@@ -37,14 +42,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>João Silva</td>
-                    <td>12345678900</td>
-                    <td>SUV</td>
-                    <td>25/11/2024</td>
-                    <td>30/11/2024</td>
-                    <td>Rua Exemplo, 123 - São Paulo, SP</td>
-                    <td>(11) 1234-5678</td>
-                    <td>R$ 500,00</td>
+                    <td><?php echo $info_cliente['nome_cliente']; ?></td>
+                    <td><?php echo $info_cliente['numero_cnh_cliente']; ?></td>
+                    <td><?php echo $veiculo['nome_veiculo']; ?></td>
+                    <td><?php echo $info_locacao['data_inicial_locacao']; ?></td>
+                    <td><?php echo $info_locacao['data_final_locacao']; ?></td>
+                    <td><?php echo $endereco_locadora['nome_endereco']; ?></td>
+                    <td><?php echo $telefone_locadora['numero_telefone']; ?></td>
+                    <td><?php echo $info_locacao['valor_final_locacao']; ?></td>
 
                 </tr>
 

@@ -112,3 +112,9 @@ INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabr
 VALUES ('Citroen Jumpy', 'DDZ5678', 280.00, '2023', 'Branco', 'Jumpy 3.0');
 INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
 VALUES ('Hyundai HR', 'XAG5678', 300.00, '2013', 'Branco', 'HR 2.0');
+
+INSERT INTO locadora(nome_locadora, cnpj_locadora)
+VALUES("LOVETECH", 9963564875);
+
+INSERT INTO endereco(nome_endereco, codigo_cliente, codigo_locadora, tipo_endereco)
+VALUES("Rua Helvétia, 500 - Campos Elíseos, São Paulo - SP", NULL, 1, "principal");
