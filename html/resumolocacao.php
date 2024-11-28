@@ -10,7 +10,7 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="/locadora/img/logo.jpg" alt="Logo LOVETEC">
+                <img src="/img/logo.jpg" alt="Logo LOVETEC">
                 <h1>LOVETEC</h1>
             </div>
             <nav class="navbar">
@@ -20,27 +20,40 @@
         </div>
     </header>
 
-    <section class="confirmacao">
-        <div class="confirmacao-container">
-            <h2>Confirmação de Locação</h2>
-            <div class="confirmacao-content">
-                <h3>Resumo da Locação</h3>
-                <div class="info">
-                    <p><strong>Nome:</strong> João Silva</p>
-                    <p><strong>CNH:</strong> 12345678900</p>
-                    <p><strong>Veículo Escolhido:</strong> SUV</p>
-                    <p><strong>Data de Início:</strong> 25/11/2024</p>
-                    <p><strong>Data de Término:</strong> 30/11/2024</p>
-                    <p><strong>Endereço da Locadora:</strong> Rua Exemplo, 123 - São Paulo, SP</p>
-                    <p><strong>Telefone da Locadora:</strong> (11) 1234-5678</p>
-                    <p><strong>Valor da Locação:</strong> R$ 500,00</p>
-                </div>
-                <div class="actions">
-                    <a href="homeusuario.php" class="cta-button">Voltar para o início</a>
-                </div>
-            </div>
+    <main class="container">
+        <h2>Confirmação de Locação</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CNH</th>
+                    <th>Veículo Escolhido</th>
+                    <th>Data de início</th>
+                    <th>Data de término</th>
+                    <th>Endereço da Locadora</th>
+                    <th>Telefone da Locadora</th>
+                    <th>Valor da locação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>12345678900</td>
+                    <td>SUV</td>
+                    <td>25/11/2024</td>
+                    <td>30/11/2024</td>
+                    <td>Rua Exemplo, 123 - São Paulo, SP</td>
+                    <td>(11) 1234-5678</td>
+                    <td>R$ 500,00</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="actions">
+            <a href="homeusuario.php" class="cta-button">Confirmar</a>
         </div>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 LOVETEC - Todos os direitos reservados.</p>

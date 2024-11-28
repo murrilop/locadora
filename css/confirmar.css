@@ -11,7 +11,6 @@ body {
     color: #333;
     font-size: 16px;
     line-height: 1.6;
-    margin: 0;
 }
 
 
@@ -61,51 +60,57 @@ header .logo h1 {
 }
 
 
-
-
-.confirmacao {
-    margin-top: 40px;
+.container {
+    max-width: 1300px;
+    margin: 130px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.confirmacao-container {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #272727;
 }
 
-.confirmacao h2 {
-    color: #00b8a9;
-    margin-bottom: 30px;
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.confirmacao-content {
+thead {
+    background-color: #00b8a9;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
     text-align: left;
 }
 
-.confirmacao-content h3 {
-    font-size: 1.8em;
-    color: #2c3e50;
-    margin-bottom: 20px;
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
-.confirmacao-content .info {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
 }
 
-.confirmacao-content .info p {
-    margin: 8px 0;
+tbody td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
 }
 
-.confirmacao-content .info strong {
+tbody td:first-child {
+    font-weight: bold;
     color: #00b8a9;
 }
-
 
 .actions a {
     background-color: #ff6f00;
@@ -114,20 +119,23 @@ header .logo h1 {
     padding: 13px 17px;
     border-radius: 5px;
     font-size: 1em;
+    margin-top: 20px;
+    display:inline-table;
+    
 }
 
 .actions a:hover {
     background-color: #e65c00;
 }
 
+
 footer {
     text-align: center;
     margin-top: 40px;
-    color: #666;
     font-size: 0.9em;
+    color: #777;
 }
 
 footer p {
     margin-top: 10px;
 }
-
