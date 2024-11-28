@@ -1,3 +1,9 @@
+<?php
+
+    $sql = "SELECT codigo_veiculo, nome_veiculo, "
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

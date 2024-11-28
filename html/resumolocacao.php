@@ -1,6 +1,6 @@
 <?php
     include("../config/conectar.php");
-    include("../funcoes/verificar_session_cliente.php");
+    include("../funcoes/verificar_session.php");
     include("../funcoes/locacao/mostrar_locacao.php");
 ?>
 <!DOCTYPE html>
