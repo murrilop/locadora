@@ -19,7 +19,7 @@ header {
     background-color: #00b8a9;
     color: white;
     padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1 4px 10px rgba(99, 8, 4, 3.5);
 }
 
 .header-content {

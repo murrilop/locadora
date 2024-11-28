@@ -118,3 +118,6 @@ VALUES("LOVETECH", 9963564875);
 
 INSERT INTO endereco(nome_endereco, codigo_cliente, codigo_locadora, tipo_endereco)
 VALUES("Rua Helvétia, 500 - Campos Elíseos, São Paulo - SP", NULL, 1, "principal");
+
+INSERT INTO telefone (numero_telefone, codigo_cliente, codigo_locadora)
+VALUES('11955567778', NULL, 1);

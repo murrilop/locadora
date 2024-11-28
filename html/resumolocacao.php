@@ -41,18 +41,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><?php echo $info_cliente['nome_cliente']; ?></td>
-                    <td><?php echo $info_cliente['numero_cnh_cliente']; ?></td>
-                    <td><?php echo $veiculo['nome_veiculo']; ?></td>
-                    <td><?php echo $info_locacao['data_inicial_locacao']; ?></td>
-                    <td><?php echo $info_locacao['data_final_locacao']; ?></td>
-                    <td><?php echo $endereco_locadora['nome_endereco']; ?></td>
-                    <td><?php echo $telefone_locadora['numero_telefone']; ?></td>
-                    <td><?php echo $info_locacao['valor_final_locacao']; ?></td>
-
-                </tr>
-
+            <?php
+            foreach ($dados_locacoes as $locacao) {
+        ?>
+            <tr>
+                <td><?php echo $locacao['nome_cliente']; ?></td>
+                <td><?php echo $locacao['numero_cnh_cliente']; ?></td>
+                <td><?php echo $locacao['nome_veiculo']; ?></td>
+                <td><?php echo $locacao['data_inicial_locacao']; ?></td>
+                <td><?php echo $locacao['data_final_locacao']; ?></td>
+                <td><?php echo $locacao['nome_endereco']; ?></td>
+                <td><?php echo $locacao['numero_telefone']; ?></td>
+                <td><?php echo $locacao['valor_final_locacao']; ?></td>
+            </tr>
+        <?php
+            }
+        ?>
             </tbody>
         </table>
         <div class="actions">
