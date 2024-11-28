@@ -42,16 +42,14 @@
         $locadora = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // Conseguir endereço da locadora
-        $sql = "SELECT nome_endereco FROM endereco WHERE codigo_locadora = :codigo_locadora";
+        $sql = "SELECT endereco_locadora FROM locadora";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":codigo_locadora", $locadora['codigo_locadora']);
         $stmt->execute();
         $endereco_locadora = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // Conseguir telefone da locadora
-        $sql = "SELECT numero_telefone FROM telefone WHERE codigo_locadora = :codigo_locadora";
+        $sql = "SELECT numero_telefone FROM telefone WHERE codigo_locadora IS NOT NULL;";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":codigo_locadora", $locadora['codigo_locadora']);
         $stmt->execute();
         $telefone_locadora = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -61,7 +59,7 @@
             'nome_veiculo' => $veiculo['nome_veiculo'],
             'data_inicial_locacao' => $locacao['data_inicial_locacao'],
             'data_final_locacao' => $locacao['data_final_locacao'],
-            'nome_endereco' => $endereco_locadora['nome_endereco'],
+            'nome_endereco' => $endereco_locadora['endereco_locadora'],
             'numero_telefone' => $telefone_locadora['numero_telefone'],
             'valor_final_locacao' => $locacao['valor_final_locacao']
         ];
