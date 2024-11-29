@@ -24,7 +24,7 @@ CREATE TABLE locacao (
     data_final_locacao date not NULL,
     valor_final_locacao DECIMAL (6,2) NOT NULL,
     codigo_cliente int not null,
-    codigo_veiculo int not null
+    codigo_veiculo int null
 );
 
 CREATE TABLE veiculo (
@@ -84,33 +84,33 @@ insert into usuario (email, senha, tipo_usuario, codigo_cliente)
 values('admin@gmail.com', 123456789, 'adm', NULL);
 
 
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Fiat Mobi', 'ABC1234', 150.00, '2015', 'Branco', 'Mobi 1.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Fiat Uno', 'BFC1234', 150.00, '2015', 'Branco', 'Uno 1.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Renault Kwid', 'XYZ5678', 150.00, '2020', 'Branco', 'Kwid 2.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Fiat Mobi', 'ABC1234', 150.00, '2015', 'Branco', 'Mobi 1.0', 'Compactos');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Fiat Uno', 'BFC1234', 150.00, '2015', 'Branco', 'Uno 1.0', 'Compactos');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Renault Kwid', 'XYZ5678', 150.00, '2020', 'Branco', 'Kwid 2.0', 'Compactos');
 
 
 
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Volkswagen T-Cross', 'BVZ5678', 230.00, '2020', 'Branco', 'T-cross 2.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Hyundai Creta', 'ASZ5678', 250.00, '2021', 'Branco', 'Creta 2.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Crevrolet Tracker', 'ZDZ5678', 270.00, '2023', 'Branco', 'Tracker 2.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Volkswagen T-Cross', 'BVZ5678', 230.00, '2020', 'Branco', 'T-cross 3.0', 'SUV');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Hyundai Creta', 'ASZ5678', 250.00, '2021', 'Branco', 'Creta 2.0', 'SUV');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Crevrolet Tracker', 'ZDZ5678', 270.00, '2023', 'Branco', 'Tracker 2.0', 'SUV');
 
 
 
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Fiat Doblo', 'XFZ5678', 280.00, '2023', 'Branco', 'Doblo 2.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Citroen Jumpy', 'DDZ5678', 280.00, '2023', 'Branco', 'Jumpy 3.0');
-INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo) 
-VALUES ('Hyundai HR', 'XAG5678', 300.00, '2013', 'Branco', 'HR 2.0');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Fiat Doblo', 'XFZ5678', 280.00, '2023', 'Branco', 'Doblo 2.0', 'Utilitários');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Citroen Jumpy', 'DDZ5678', 280.00, '2023', 'Branco', 'Jumpy 3.0', 'Utilitários');
+INSERT INTO veiculo (nome_veiculo, placa_veiculo, valor_diaria_veiculo, ano_fabricacao_veiculo, cor_veiculo, modelo_veiculo, categoria) 
+VALUES ('Hyundai HR', 'XAG5678', 300.00, '2013', 'Branco', 'HR 2.0', 'Utilitários');
 
-INSERT INTO locadora(nome_locadora, cnpj_locadora)
-VALUES("LOVETECH", 9963564875);
+INSERT INTO locadora(nome_locadora, cnpj_locadora, endereco_locadora)
+VALUES("LOVETECH", 9963564875, 'Rua cracolandia feliz, 79');
 
 INSERT INTO endereco(nome_endereco, codigo_cliente, codigo_locadora, tipo_endereco)
 VALUES("Rua Helvétia, 500 - Campos Elíseos, São Paulo - SP", NULL, 1, "principal");

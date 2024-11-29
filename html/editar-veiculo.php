@@ -1,3 +1,14 @@
+<?php
+
+    include("../config/conectar.php");
+    
+    $sql = "SELECT * FROM veiculo";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $veiculo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

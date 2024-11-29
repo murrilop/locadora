@@ -34,6 +34,11 @@
         $stmt->execute();
         $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        if($veiculo == NULL){
+            @$veiculo['nome_veiculo'] = "Veiculo indisponivel";
+        }
+
+
         // Conseguir dados da locadora
         $sql = "SELECT * FROM locadora WHERE codigo_locadora = :codigo_locadora";
         $stmt = $pdo->prepare($sql);
