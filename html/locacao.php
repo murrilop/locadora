@@ -1,7 +1,7 @@
 <?php
 
     include("../config/conectar.php");
-    include("../funcoes/verificar_session_cliente.php");
+    include("../funcoes/verificar_session.php");
 
     $sql = "SELECT * FROM veiculo";
     $stmt = $pdo->prepare($sql);

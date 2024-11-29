@@ -1,6 +1,6 @@
 <?php 
     include_once('../config/conectar.php');
-    include("../funcoes/verificar_session_cliente.php");
+    include("../funcoes/verificar_session.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

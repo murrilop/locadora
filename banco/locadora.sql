@@ -6,8 +6,9 @@ USE locadora;
 
 CREATE TABLE locadora (
     codigo_locadora int auto_increment PRIMARY KEY,
-    nome_locadora varchar (50),
-    cnpj_locadora varchar (14) not null
+    nome_locadora varchar (50) not null,
+    cnpj_locadora varchar (14) not null,
+    endereco_locadora varchar(30) not null
 );
 
 CREATE TABLE cliente (
@@ -39,9 +40,8 @@ CREATE TABLE veiculo (
 CREATE TABLE endereco (
     codigo_endereco int auto_increment PRIMARY KEY,
     nome_endereco varchar(50) not null,
-    codigo_cliente int,
-    codigo_locadora int,
     tipo_endereco varchar (50) null
+    codigo_cliente int
 );
 
 CREATE TABLE telefone (
@@ -63,10 +63,6 @@ CREATE TABLE usuario (
 ALTER TABLE endereco ADD CONSTRAINT FK_endereco_2
     FOREIGN KEY (codigo_cliente)
     REFERENCES cliente (codigo_cliente);
- 
-ALTER TABLE endereco ADD CONSTRAINT FK_endereco_3
-    FOREIGN KEY (codigo_locadora)
-    REFERENCES locadora (codigo_locadora);
  
 ALTER TABLE telefone ADD CONSTRAINT FK_telefone_2
     FOREIGN KEY (codigo_cliente)
