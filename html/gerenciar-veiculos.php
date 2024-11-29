@@ -1,6 +1,11 @@
 <?php
 
-    $sql = "SELECT codigo_veiculo, nome_veiculo, "
+    include("../config/conectar.php");
+
+    $sql = "SELECT * from veiculo";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $veiculos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -35,23 +40,27 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Modelo</th>
+                    <th>Nome</th>
                     <th>Categoria</th>
                     <th>Preço/Dia</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Fiat Mobi</td>
-                    <td>Compacto</td>
-                    <td>R$ 90,00</td>
-                    <td>
-                        <a href="editar-veiculo.php"><button class="edit-button">Editar</button></a>
-                        <button class="delete-button">Excluir</button>
-                    </td>
-                </tr>
+                <?php foreach($veiculos as $veiculo): ?>
+                    <tr>
+                        <td><?php echo $veiculo['codigo_veiculo'] ?></td>
+                        <td><?php echo $veiculo['nome_veiculo'] ?></td>
+                        <td><?php echo $veiculo['modelo_veiculo'] ?></td>
+                        <td><?php echo $veiculo['valor_diaria_veiculo'] ?></td>
+                    
+                        <td>
+                            <a href="editar-veiculo.php?codigo_veiculo=<?php echo $veiculo['codigo_veiculo']; ?>"><button class="edit-button">Editar</button></a>
+                            <a class="delete-button" href="../funcoes/veiculo/excluir_veiculo.php?codigo_veiculo=<?php echo $veiculo['codigo_veiculo']; ?>">Excluir</a>
+                        </td>
+                        
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </main>

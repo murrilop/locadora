@@ -24,7 +24,7 @@ CREATE TABLE locacao (
     data_final_locacao date not NULL,
     valor_final_locacao DECIMAL (6,2) NOT NULL,
     codigo_cliente int not null,
-    codigo_veiculo int not null
+    codigo_veiculo int null
 );
 
 CREATE TABLE veiculo (
