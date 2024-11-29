@@ -1,3 +1,9 @@
+<?php
+
+ include("../funcoes/verificar_session.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,10 +31,10 @@
     <main class="container">
         <h2>Adicionar Novo Veículo</h2>
         
-        <form action="adicionar-veiculo.php" method="POST" enctype="multipart/form-data">
+        <form action="../funcoes/veiculo/adicionar_veiculo.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="modelo">Nome do veículo</label>
-                <input type="text" id="nome do veiculo" name="nome do veiculo" value="Nome" required>
+                <input type="text" id="nome_veiculo" name="nome_veiculo" value="Nome" required>
             </div>
             
             <div class="form-group">
@@ -61,7 +67,7 @@
             
             <div class="form-group">
                 <label for="imagem">Imagem do Veículo</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                <input type="file" id="imagem" name="imagem" accept="image/*">
             </div>
 
             <div class="form-actions">

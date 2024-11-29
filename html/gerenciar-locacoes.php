@@ -1,3 +1,10 @@
+<?php
+
+    include("../config/conectar.php");
+    include("../funcoes/locacao/listar_locacoes.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,21 +45,26 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($dados_locacoes as $locacao) { ?>
                 <tr>
-                    <td>101</td>
-                    <td>João Silva</td>
-                    <td>Fiat Mobi</td>
-                    <td>01/11/2024</td>
-                    <td>07/11/2024</td>
-                    <td>R$ 630,00</td>
-                    <td>Ativa</td>
+                    <td><?php echo $locacao['codigo_locacao']; ?></td>
+                    <td><?php echo $locacao['nome_cliente']; ?></td>
+                    <td><?php echo $locacao['nome_veiculo']; ?></td>
+                    <td><?php echo date("d/m/Y", strtotime($locacao['data_inicial_locacao'])); ?></td>
+                    <td><?php echo date("d/m/Y", strtotime($locacao['data_final_locacao'])); ?></td>
+                    <td>R$ <?php echo $locacao['valor_final_locacao'], 2, ',', '.'; ?></td>
+                    <td></td> <!-- Status vazio -->
                     <td>
-                        
-                        <a href="editar-locacao.php"><button class="edit-button">Editar</button></a>
-                        <button class="delete-button">Cancelar</button>
+                        <a href="editar-locacao.php?codigo=<?php echo $locacao['codigo_locacao']; ?>">
+                            <button class="edit-button">Editar</button>
+                        </a>
+                        <form method="POST" action="cancelar-locacao.php" style="display:inline;">
+                            <input type="hidden" name="codigo_locacao" value="<?php echo $locacao['codigo_locacao']; ?>">
+                            <button type="submit" class="delete-button">Cancelar</button>
+                        </form>
                     </td>
                 </tr>
-
+                <?php } ?>
             </tbody>
         </table>
     </main>

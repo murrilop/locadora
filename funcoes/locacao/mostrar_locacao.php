@@ -35,7 +35,7 @@
         $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($veiculo == NULL){
-            @$veiculo['nome_veiculo'] = "Veiculo indisponivel";
+            $veiculo['nome_veiculo'] = "Veiculo indisponivel";
         }
 
 
@@ -59,6 +59,7 @@
         $telefone_locadora = $stmt->fetch(PDO::FETCH_ASSOC);
 
         $dados_locacoes[] = [
+            'codigo_cliente' => $codigo_cliente['codigo_cliente'],
             'nome_cliente' => $info_cliente['nome_cliente'],
             'numero_cnh_cliente' => $info_cliente['numero_cnh_cliente'],
             'nome_veiculo' => $veiculo['nome_veiculo'],
