@@ -36,7 +36,6 @@ include("../funcoes/verificar_session.php");
         <div class="banner-text">
             <h2>Alugue um Carro Agora!</h2>
             <p>Temos a frota ideal para você, desde carros compactos até SUVs e utilitários.</p>
-            <a href="locacao.php" class="cta-button">Faça sua locação</a>
         </div>
     </section>
 

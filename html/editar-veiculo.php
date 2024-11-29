@@ -27,6 +27,11 @@
         
         <form action="editar-veiculo.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
+                <label for="modelo">Nome do veículo</label>
+                <input type="text" id="nome do veiculo" name="nome do veiculo" value="Nome" required>
+            </div>
+
+            <div class="form-group">
                 <label for="modelo">Modelo</label>
                 <input type="text" id="modelo" name="modelo" value="Modelo Atual" required>
             </div>
