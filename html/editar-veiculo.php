@@ -1,12 +1,16 @@
 <?php
 
     include("../config/conectar.php");
-    
-    $sql = "SELECT * FROM veiculo";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $veiculo = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    $codigo_veiculo = $_GET['codigo_veiculo'];
+
+    $sql = "SELECT * FROM veiculo where codigo_veiculo = :codigo_veiculo";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":codigo_veiculo", $codigo_veiculo);
+    $stmt->execute();
+    $veiculo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    var_dump($_GET);
 ?>
 
 <!DOCTYPE html>
@@ -36,15 +40,15 @@
     <main class="container">
         <h2>Editar Veículo</h2>
         
-        <form action="editar-veiculo.php" method="POST" enctype="multipart/form-data">
+        <form action="../funcoes/veiculo/editar_veiculo.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="modelo">Nome do veículo</label>
-                <input type="text" id="nome do veiculo" name="nome do veiculo" value="Nome" required>
+                <input type="text" id="nome do veiculo" name="nome_veiculo" value="<?php echo $veiculo['nome_veiculo']; ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo" value="Modelo Atual" required>
+                <input type="text" id="modelo" name="modelo" value="<?php echo $veiculo['modelo_veiculo']; ?>" required>
             </div>
             
             <div class="form-group">
@@ -58,16 +62,16 @@
 
             <div class="form-group">
                 <label for="preco">Preço/Dia</label>
-                <input type="number" id="preco" name="preco" step="0.01" value="120.00" required>
+                <input type="number" id="preco" name="preco" step="0.01" value="<?php echo $veiculo['valor_diaria_veiculo']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="placa">Placa</label>
-                <input type="text" id="placa" name="placa" maxlength="7" required placeholder="ABC1234">
+                <input type="text" id="placa" name="placa" maxlength="7" required placeholder="ABC1234" value="<?php echo $veiculo['placa_veiculo']; ?>" >
             </div>
 
             <div class="form-group">
                 <label for="ano">Ano de Fabricação</label>
-                <input type="number" id="ano" name="ano" min="1900" max="2024" required>
+                <input type="number" id="ano" name="ano" min="1900" max="2024" value="<?php echo $veiculo['ano_fabricacao_veiculo']; ?>" required>
             </div>
             
             <div class="form-group">
@@ -75,6 +79,8 @@
                 <input type="file" id="imagem" name="imagem" accept="image/*">
                 <!-- <p class="file-hint">Nenhum arquivo selecionado</p> -->
             </div>
+
+            <input type="hidden" name="codigo_veiculo" value="<?php echo $codigo_veiculo; ?>" >
 
             <div class="form-actions">
                 <button type="submit" class="save-button">Salvar</button>
