@@ -14,7 +14,6 @@ body {
     margin: 0;
 }
 
-
 header {
     background-color: #00b8a9;
     color: white;
@@ -60,87 +59,85 @@ header .logo h1 {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-.frota {
-    margin: 40px auto;
-    text-align: center;
-    max-width: 1200px;
-}
-
-.frota h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    margin-top: 90px;
     padding: 20px;
-    justify-content: center;
-}
-
-.veiculo {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
 }
 
-
-.veiculo img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-bottom: 1px solid #ddd;
-}
-
-.veiculo h4 {
-    font-size: 18px;
-    margin: 10px 0;
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.veiculo p {
-    margin: 5px 0;
-    text-align: center;
-    color: #555;
-    font-size: 14px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-
-.veiculo p.preco {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
 }
 
-.cta-button {
-    margin: 15px auto;
-    padding: 10px 20px;
-    background-color: #ff6f00;
-    color: #fff;
-    text-decoration: none;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    width: fit-content;
+    margin-top: 5px;
 }
 
-.cta-button:hover {
-    background-color: #e65c00;
+.form-actions {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.save-button {
+    background-color: #00b8a9;
+}
+
+button.save-button:hover {
+    background-color: #008f7f;
+}
+
+a.cancel-button {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a.cancel-button:hover {
+    background-color: #e53935;
 }
 
 footer {
     text-align: center;
-    margin-top: 40px; 
+    margin-top: 40px;
     font-size: 0.9em;
 }
 

@@ -20,7 +20,7 @@
             <button type="submit">Entrar</button>
         </form>
 
-        <p>Não tem uma conta? <a href="/locadora/html/cadastro.php">Cadastre-se</a></p>
+        <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
     </div>
 
 </body>

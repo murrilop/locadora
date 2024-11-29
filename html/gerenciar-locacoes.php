@@ -47,23 +47,12 @@
                     <td>R$ 630,00</td>
                     <td>Ativa</td>
                     <td>
-                        <button class="edit-button">Editar</button>
+                        
+                        <a href="editar-locacao.php"><button class="edit-button">Editar</button></a>
                         <button class="delete-button">Cancelar</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Maria Oliveira</td>
-                    <td>Volkswagen T-Cross</td>
-                    <td>15/10/2024</td>
-                    <td>22/10/2024</td>
-                    <td>R$ 1.050,00</td>
-                    <td>Concluída</td>
-                    <td>
-                        <button class="edit-button">Editar</button>
-                        <button class="delete-button">Cancelar</button>
-                    </td>
-                </tr>
+
             </tbody>
         </table>
     </main>

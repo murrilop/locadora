@@ -23,7 +23,7 @@
 
     <main class="container">
         <h2>Gerenciar Veículos</h2>
-        <button class="add-button">Adicionar Novo Veículo</button>
+        <a href="adicionarveiculo.php" class="add-button">Adicionar Novo Veículo</a>
 
         <table>
             <thead>
@@ -42,17 +42,7 @@
                     <td>Compacto</td>
                     <td>R$ 90,00</td>
                     <td>
-                        <button class="edit-button">Editar</button>
-                        <button class="delete-button">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Volkswagen T-Cross</td>
-                    <td>SUV</td>
-                    <td>R$ 150,00</td>
-                    <td>
-                        <button class="edit-button">Editar</button>
+                        <a href="editar-veiculo.php"><button class="edit-button">Editar</button></a>
                         <button class="delete-button">Excluir</button>
                     </td>
                 </tr>
