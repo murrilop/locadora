@@ -1,7 +1,7 @@
 <?php
 
-    include("../config/conectar.php");
-    include("../funcoes/verficar_session.php");
+    @include("../config/conectar.php");
+    @include("../funcoes/verficar_session.php");
 
 ?>
 <!DOCTYPE html>
