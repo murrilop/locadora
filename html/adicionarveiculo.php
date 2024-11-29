@@ -44,7 +44,16 @@
                 <label for="preco">Preço/Dia</label>
                 <input type="number" id="preco" name="preco" step="0.01" required>
             </div>
+            <div class="form-group">
+                <label for="placa">Placa</label>
+                <input type="text" id="placa" name="placa" maxlength="7" required placeholder="ABC1234">
+            </div>
 
+            <div class="form-group">
+                <label for="ano">Ano de Fabricação</label>
+                <input type="number" id="ano" name="ano" min="1900" max="2024" required>
+            </div>
+            
             <div class="form-group">
                 <label for="imagem">Imagem do Veículo</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*" required>
