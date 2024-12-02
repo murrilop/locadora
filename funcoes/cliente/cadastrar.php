@@ -47,11 +47,10 @@ if ($stmt->rowCount() > 0) {
 
         $stmt->execute();
 
-        $sql_endereco = "INSERT INTO endereco (nome_endereco, codigo_cliente, codigo_locadora, tipo_endereco) values(:nome_endereco, :codigo_cliente, :codigo_locadora, :tipo_endereco)";
+        $sql_endereco = "INSERT INTO endereco (nome_endereco, codigo_cliente, tipo_endereco) values(:nome_endereco, :codigo_cliente, :tipo_endereco)";
         $stmt = $pdo->prepare($sql_endereco);
         $stmt->bindParam(':nome_endereco', $endereco);
         $stmt->bindParam(':codigo_cliente', $codigo_cliente);
-        $stmt->bindValue(':codigo_locadora', null, PDO::PARAM_NULL);
         $stmt->bindValue(':tipo_endereco', null, PDO::PARAM_NULL);
 
         if ($stmt->execute()) {
